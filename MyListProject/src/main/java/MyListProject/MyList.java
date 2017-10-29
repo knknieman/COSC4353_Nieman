@@ -98,6 +98,7 @@ public class MyList{
 				top = middle - 1;
 			}
 
+
 		}
 		middle = -1;
 		return middle;
@@ -124,8 +125,7 @@ public class MyList{
 
 		}
 		middle = -1;
-		return middle;
-	}
+		return middle;	}
 	
 	public static void bubbleSort(int[] arr){
 		double n = arr.length;
@@ -135,8 +135,7 @@ public class MyList{
 			for(int j = 1; j < (n-i); j++){
 				if(arr[j-1] > arr[j]){
 					temp = arr[j-1];
-					arr[j-1] = arr[j];
-					arr[j] = temp;
+					arr[j-1] = arr[j];					arr[j] = temp;
 				}
 			}
 		}
@@ -179,16 +178,16 @@ public class MyList{
 
         	final Options options = new Options();
 
-		final Option typeOfInput = Option.builder("t").hasArg(true).argName("type").longOpt					("type").desc("Type of input").required(true).type(String.class).build();
+		final Option typeOfInput = Option.builder("t").hasArg(true).argName("type").longOpt("type").desc("Type of input").required(true).type(String.class).build();
 		
 		options.addOption(typeOfInput);
 		
-		final Option key = Option.builder("k").hasArg(true).argName("key").longOpt		                		("key").desc("The Key to find").required(true).type(String.class).build();
+		final Option key = Option.builder("k").hasArg(true).argName("key").longOpt("key").desc("The Key to find").required(true).type(String.class).build();
 		
 		options.addOption(key);
 			
  		
-        	final Option list = Option.builder("l").hasArg(true).argName("list").longOpt						("list").desc("List of values").required(true).type(String.class).build();
+        	final Option list = Option.builder("l").hasArg(true).argName("list").longOpt("list").desc("List of values").required(true).type(String.class).build();
 
 		list.setArgs(Option.UNLIMITED_VALUES);
 		options.addOption(list);
